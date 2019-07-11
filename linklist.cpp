@@ -12,9 +12,9 @@ struct Node
     int info;
     node *next;
 };
-node* getnode(node* root, int data)
+node* getnode(node *root, int data)
 {
-    node* list = new node(); //calling node
+    node *list = new node(); //calling node
     list->info = data;
     list->next = NULL;
     if (root == NULL)
@@ -25,7 +25,7 @@ node* getnode(node* root, int data)
 }
 int main()
 {
-    node* first = NULL, *ptr = NULL;
+    node *first = NULL, *ptr = NULL;
     cout << "item to insert:";
     int y = input();
     for (int i = 1; i <= y; i++)
