@@ -20,7 +20,8 @@ node* getnode(node *root, int data)
     if (root == NULL)
         return list;
 
-    root->next = list;
+    root->next = list;//root contain the previous node
+
     return list;
 }
 int main()
