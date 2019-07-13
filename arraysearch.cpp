@@ -48,7 +48,6 @@ int main()
             cout << "item found in position :"
                  << " " << i + 1 << endl;
             flag = false;
-            break;
         }
     }
     if (flag)
