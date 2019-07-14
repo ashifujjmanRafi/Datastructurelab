@@ -60,6 +60,7 @@ int main()
     cout << "element you want to insert:" << endl;
     cin >> insert;
     bubbleSort(array,item);
+    
     pos=findelement(array,item,insert);
 
     cout <<"print the position"<< pos << endl;
