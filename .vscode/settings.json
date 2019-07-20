@@ -1,0 +1,13 @@
+{
+    "maven.view": "hierarchical",
+    "files.associations": {
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "ostream": "cpp"
+    }
+}

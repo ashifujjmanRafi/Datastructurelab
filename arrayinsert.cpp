@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 void input(int a[], int y)
 {
     for (int i = 0; i < y; i++)
@@ -9,27 +10,27 @@ void input(int a[], int y)
 }
 void output(int a[], int y)
 {
-    for (int i = 0; i <= y; i++)
+    for (int i = 0; i < y; i++)
     {
         cout << a[i] << " ";
     }
 }
-int findelement(int a[], int size, int key)
-{   
-    int idx = 0;
-    while((key >= a[idx]) && (idx < size)) {
-        idx++;
-    }
-    return idx;
-}
 
-void insertion(int a[],int size,int pos,int ele)
+void insertion(int a[], int size, int ele)
 {
-    for (int i = size; i > pos; i--)
+    for (int i = 0; i < size; i++)
     {
-        a[i]=a[i-1];
+        if (a[i] >= ele)
+        {
+            for (int j = size; j > i; j--)
+            {
+                a[j] = a[j - 1];
+            }
+            a[i] = ele;
+            return;
+        }
     }
-    a[pos]=ele;
+    a[size] = ele;
 }
 
 void bubbleSort(int arr[], int n)
@@ -40,32 +41,26 @@ void bubbleSort(int arr[], int n)
         for (j = 0; j < n - i - 1; j++)
             if (arr[j] > arr[j + 1])
             {
-                swap(arr[j],arr[j+1]);
+                swap(arr[j], arr[j + 1]);
             }
 }
-
-
 
 int main()
 {
     cout << "item you wanted to take in array:" << endl;
     int item;
     cin >> item;
-    int array[item];
-    cout<<"enter the element:"<<endl;
+    int array[item + 1];
+    cout << "enter the element:" << endl;
     input(array, item);
 
-    
-    int insert,  pos;
+    bubbleSort(array, item);
+
+    int insert, pos;
     cout << "element you want to insert:" << endl;
     cin >> insert;
-    bubbleSort(array,item);
-    
-    pos=findelement(array,item,insert);
 
-    cout <<"print the position"<< pos << endl;
-    
-    insertion(array,item,pos,insert);
-    output(array,item);
-return 0;
+    insertion(array, item, insert);
+    output(array, item + 1);
+    return 0;
 }

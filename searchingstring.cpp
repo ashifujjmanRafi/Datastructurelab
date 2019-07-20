@@ -40,6 +40,10 @@ int main()
     string s;
     cin >> s;
 
+
+
+   // *************************************************************
+
     cout << "using linear search" << endl;
 
     bool flag = true;
@@ -57,12 +61,14 @@ int main()
     if (flag)
         cout << "not found" << endl;
 
+        //*************************************************************************
+
     cout << "using binary search" << endl;
 
     bubbleshot(str, item);
     print(str, item);
 
-    int low, high, mid;
+    int low, high, mid; 
     high = item - 1;
     low = 0;
 
